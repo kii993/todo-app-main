@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="todo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+
+<body>
+  <main id="main">
+    <img src="images/bg-desktop-dark.jpg" alt="" class="bg-img" id="bgImage">
+
+    <div class="todo-list">
+      <div id="formtag">
+        <h1>TODO<span><img src="/images/icon-sun.svg" id="todoIcon" alt="icon"></span></h1>
+        <form>
+          <div class="input-wrapper">
+            <input type="text" id="todoInput" placeholder="Currently typing" class="">
+          </div>
+        </form>
+      </div>
+
+      <div class="check-list">
+        <ul class="completed">
+          <li><span>0</span> items left</li>
+          <li class="filter-item">All</li>
+          <li class="filter-item">Active</li>
+          <li class="filter-item"> Completed</li>
+          <li>Clear Completed</li>
+        </ul>
+      </div>
+      <ul id="readerList" class="task-list">
+        <li class="drag-hint">Drag and drop to reader list</li>
+      </ul>
+
+    </div>
+  </main>
+
+  <footer id="footer">
+    <script src="product.js"></script>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+
+</html>

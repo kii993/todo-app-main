@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(235, 21%, 11%);
+}
+
+body.night-mode {
+    background-color: white;
+}
+
+.bg-img {
+    width: 100vw;
+    height: 290px;
+    margin: 0 auto;
+}
+
+#formtag {
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1 {
+    color: aliceblue;
+    width: 500px;
+    font-size: 36px;
+    letter-spacing: 0.4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.todo-list {
+    position: absolute;
+    top: 60px;
+    left: 32%;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.input-wrapper::before {
+    content: "⚪︎";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(235, 16%, 43%);
+    font-size: 34px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input {
+    width: 439px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: hsl(235, 24%, 19%);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding-left: 60px;
+    margin: 0;
+}
+
+.check-list {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    z-index: 20;
+    margin: 0 auto;
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.completed {
+    width: 500px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    color: hsl(235, 16%, 43%);
+    border-radius: 5px;
+}
+
+.completed li:first-child {
+    margin-left: 15px;
+}
+
+.completed li:nth-child(2) {
+    margin-left: 75px;
+    color: hsl(235, 62%, 54%);
+}
+
+.completed li:nth-child(3) {
+    margin-left: 20px;
+}
+
+.completed li:nth-child(4) {
+    margin-left: 20px;
+}
+
+.completed li:nth-child(5) {
+    margin-left: 30px;
+}
+
+.completed li:nth-child(3):hover,
+.completed li:nth-child(4):hover,
+.completed li:nth-child(5):hover {
+    color: hsl(233, 11%, 84%);
+}
+
+.task-list {
+    margin: 0;
+    padding: 0;
+}
+
+.task-list li {
+    height: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px hsl(235, 19%, 35%);
+}
+
+.check-icon {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 15px;
+    border: solid 1px hsl(235, 16%, 43%);
+    position: relative;
+    z-index: 0;
+}
+
+.drag-hint{
+    border-bottom: none!important;
+    margin-top: 50px!important;
+}
+
+.check-icon:hover {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.check-icon img {
+    width: 12px;
+    height: 12px;
+    display: none;
+}
+
+.check-icon::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: hsl(235, 19%, 35%);
+    display: none;
+}
+
+.check-icon:hover::after {
+    display: block;
+}
+
+.filter-buttons {
+    display: flex;
+    width: 250px;
+    justify-content: space-around;
+}
+
+.task-list li span {
+    color: hsl(233, 11%, 84%);
+}
+
+li.completed span {
+    color: gray;
+    text-decoration: line-through;
+}
+
+
+li:not(.completed) .check-icon:hover {
+    background-color: gray;
+}
+
+li.completed .check-icon {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+li.completed .check-icon::after {
+    display: none;
+}
+
+li.completed .check-icon img {
+    display: block;
+}
+
+ul.task-list li {
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    right: 20px;
+}
+
+ul.task-list li:hover .delete-btn {
+    display: block;
+}
+
+.drag-hint{
+    display: flex;
+    justify-content: center;
+    color:hsl(236, 9%, 61%);
+    font-size: 12px;
+    border-bottom: none;
+}
+
+footer {
+    background-color: hsl(235, 21%, 11%);
+    width: 100vw;
+}
+
+h3{
+    font-size: 14px;
+    margin-left: 60px;
+    margin-top: 60px;
+    font-weight: 400;
+    color: hsl(236, 9%, 61%);
+}
+
+.drag{
+    width: 300px;
+    margin: 0 auto;
+}
+
+body.night-mode input {
+    background-color: white;
+    color: hsl(235, 24%, 19%);
+}
+
+body.night-mode .check-list {
+    background-color: white;
+    color: hsl(235, 24%, 19%);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+body.night-mode .completed {
+    background-color: white;
+    color: hsl(236, 9%, 61%);
+}
+
+body.night-mode .completed li:nth-child(3):hover,
+body.night-mode .completed li:nth-child(4):hover,
+body.night-mode .completed li:nth-child(5):hover {
+    color: hsl(235, 24%, 19%);
+}
+
+body.night-mode .task-list li {
+    border-bottom: solid 1px hsl(233, 11%, 84%);
+    border-bottom: none;
+}
+
+body.night-mode .task-list li span {
+    color: hsl(235, 24%, 19%);
+}
+
+body.night-mode .check-icon {
+    border-color: hsl(233, 11%, 84%);
+}
+
+body.night-mode .check-icon:hover {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+body.night-mode .check-icon::after {
+    background-color: white;
+}
+
+body.night-mode .input-wrapper::before {
+    color: hsl(233, 11%, 84%);
+}
+
+body.night-mode #footer {
+    background-color: hsl(0, 0%, 98%);
+}
+
+
+@media screen and (max-width:500px) {
+    body {
+        overflow-x: hidden;
+        margin: 0 auto;
+    }
+
+    main {
+        background-color: hsl(235, 21%, 11%);
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .bg-img {
+        width: 100vw;
+        height: 250px;
+
+    }
+
+    #formtag {
+        width: 90%;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .todo-list {
+        width: 100%;
+        top: 30px;
+        left: 20px;
+        margin: 0 auto;
+    }
+
+    .input-wrapper {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+        font-size: 16px;
+        margin: 0 auto!important;
+        display: block;
+    }
+
+    .task-list li {
+        padding-right: 40px;
+    }
+
+    .check-list {
+        width: 90%;
+        padding-bottom: 0px;
+        background-color: transparent;
+    }
+
+    .check-list ul {
+        background-color: hsl(235, 24%, 19%);
+    }
+
+    .check-list ul:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .completed {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+
+    ul.completed {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .completed li {
+        padding: 15px;
+    }
+
+    .filter-buttons span {
+        flex: 1 1 30%;
+        text-align: center;
+    }
+
+    .responsive-div {
+        margin-top: 0px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        background-color: hsl(235, 24%, 19%);
+        border-radius: 6px;
+    }
+
+    .responsive-div span {
+        font-size: 14px;
+        font-weight: 700;
+        color: hsl(235, 16%, 43%);
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    .responsive-div span:first-child {
+        color: hsl(235, 62%, 54%);
+    }
+
+    .responsive-div span:nth-child(2):hover,
+    .responsive-div span:nth-child(3):hover {
+        color: hsl(233, 11%, 84%);
+    }
+
+    body.night-mode main {
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    body.night-mode .check-list {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    body.night-mode .task-list li,
+    body.night-mode .check-list ul,
+    body.night-mode .responsive-div,
+    body.night-mode .completed {
+        background-color: white;
+    }
+
+    body.night-mode .task-list li:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+
+    body.night-mode .completed {
+        box-shadow: 0 0px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    body.night-mode .responsive-div {
+        box-shadow: 0 0px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    body.night-mode .responsive-div span:first-child {
+        color: rgb(0, 132, 255);
+    }
+
+    body.night-mode .responsive-div span {
+        color: hsl(235, 16%, 43%);
+    }
+
+    body.night-mode .task-list li {
+        border-bottom: solid 1px hsl(233, 11%, 84%);
+        margin-bottom: 0;
+    }
+
+    .drag-hint{
+        width: 90%;
+        background-color: transparent!important;
+        margin:0 auto;
+        padding: 0!important;
+    }
+}
