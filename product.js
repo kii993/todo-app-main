@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hour >= 18 || hour < 6) {
         // 夜用設定
         body.classList.add("night-mode");
-        bgImage.src = "/images/bg-desktop-light.jpg";
-        icon.src = "/images/icon-moon.svg";
+        bgImage.src = "images/bg-desktop-light.jpg";
+        icon.src = "images/icon-moon.svg";
     } else {
         body.classList.remove("night-mode");
-        bgImage.src = "/images/bg-desktop-dark.jpg";
-        icon.src = "/images/icon-sun.svg";
+        bgImage.src = "images/bg-desktop-dark.jpg";
+        icon.src = "images/icon-sun.svg";
     }
 
     // ★ ここから追加 ★
