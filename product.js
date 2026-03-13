@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
             checkWrapper.classList.add("check-icon"); // CSSで擬似要素やhoverを制御
 
             const checkImg = document.createElement("img");
-            checkImg.src = "/images/icon-check.svg"; // チェック印画像のパス
+            checkImg.src = "images/icon-check.svg"; // チェック印画像のパス
             checkImg.alt = "check";
             checkWrapper.appendChild(checkImg);
             li.appendChild(checkWrapper);
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
             deleteBtn.classList.add("delete-btn");
 
             const deleteImg = document.createElement("img");
-            deleteImg.src = "/images/icon-cross.svg"; // 画像のパス
+            deleteImg.src = "images/icon-cross.svg"; // 画像のパス
             deleteImg.alt = "delete";
             deleteImg.width = 16; // 好きなサイズ
             deleteImg.height = 16;
