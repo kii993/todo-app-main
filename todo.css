@@ -45,7 +45,8 @@ h1 {
 .todo-list {
     position: absolute;
     top: 60px;
-    left: 32%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .input-wrapper {
@@ -345,8 +346,6 @@ body.night-mode #footer {
     .todo-list {
         width: 100%;
         top: 30px;
-        left: 20px;
-        margin: 0 auto;
     }
 
     .input-wrapper {
