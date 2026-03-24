@@ -349,14 +349,15 @@ body.night-mode #footer {
     }
 
     .input-wrapper {
-        width: 90%;
+        width:100%;
     }
 
     input {
-        width: 90%;
+        width: 100%;
         font-size: 16px;
         margin: 0 auto!important;
         display: block;
+        box-sizing: border-box;
     }
 
     .task-list li {
